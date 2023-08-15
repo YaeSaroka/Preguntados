@@ -9,7 +9,7 @@ public static class BD
          List<Categoria> ListadoCategoria;
         using (SqlConnection db = new SqlConnection(ConnectionString))
         {
-            string sql = "SELECT * FROM Categoria";
+            string sql = "SELECT * FROM Categorias";
             ListadoCategoria=db.Query<Categoria>(sql).ToList();
         }
         return ListadoCategoria;
@@ -18,7 +18,7 @@ public static class BD
          List<Dificultad> ListadoDificultad;
         using (SqlConnection db = new SqlConnection(ConnectionString))
         {
-            string sql = "SELECT * FROM Dificultad";
+            string sql = "SELECT * FROM Dificultades";
             ListadoDificultad=db.Query<Dificultad>(sql).ToList();
         }
         return ListadoDificultad;
@@ -41,5 +41,16 @@ public static class BD
             }
             return ListadoPregunta; 
         }
+    }
+    public static List<Respuesta> ObtenerRespuestas(List<Pregunta> ListadoPregunta)
+    {
+        List<Respuesta> ListadoRespuesta = null;
+        using (SqlConnection db = new SqlConnection(ConnectionString))
+        foreach (Pregunta item in ListadoPregunta)
+        {
+            string sql = "SELECT * FROM Respuestas WHERE idPregunta = " + item.idPregunta;
+            ListadoRespuesta=db.Query<Respuesta>(sql).ToList();
+        }
+        return ListadoRespuesta;
     }
 }
