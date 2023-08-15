@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\PreguntORT.bundle.scp.css"
     },
     {
+      "Id": "Z:\\ORT2023\\Programación\\3bimestre\\TPS\\PreguntORT\\PreguntORT\\wwwroot\\Img\\Thumbs.db",
+      "PackagePath": "staticwebassets\\Img\\Thumbs.db"
+    },
+    {
+      "Id": "Z:\\ORT2023\\Programación\\3bimestre\\TPS\\PreguntORT\\PreguntORT\\wwwroot\\Img\\fondito.png",
+      "PackagePath": "staticwebassets\\Img\\fondito.png"
+    },
+    {
       "Id": "Z:\\ORT2023\\Programación\\3bimestre\\TPS\\PreguntORT\\PreguntORT\\wwwroot\\Img\\logo.jpg",
       "PackagePath": "staticwebassets\\Img\\logo.jpg"
     },

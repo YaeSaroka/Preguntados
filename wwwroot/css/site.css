@@ -19,4 +19,16 @@ html {
 
 body {
   margin-bottom: 60px;
+  background-color: #fcc5d7;
+}
+.futer {
+  text-decoration: none !important;
+  color: #c46182 !important;
+}
+.button{
+top: 600px;
+}
+
+#logo{
+  width: 50%;
 }
