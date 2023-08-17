@@ -51,7 +51,7 @@ footer {
 }
 
 body {
-    background: linear-gradient(to right, #ff7cbd 0%, #ff81d9 40%, #ff3fe5 60%, #ff81d9 83%, #ff7cbd 100%);
+    background: linear-gradient(to right, #ff7cbd 0%, #fda1e2 40%, #ff63dd 60%, #fda1e2 83%, #ff7cbd 100%);
     background-size: 10000px 100%;
     animation: bg 15s linear infinite;
   }
