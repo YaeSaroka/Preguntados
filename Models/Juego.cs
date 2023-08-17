@@ -24,6 +24,7 @@ public static class Juego{
     public static void CargarPartida(string username, int dificultad, int categoria){
         _preguntas = BD.ObtenerPreguntas(dificultad, categoria);
         _respuestas = BD.ObtenerRespuestas(_preguntas);
+        _username=username;
     }
     public static Pregunta ObtenerProximaPregunta(){
         Random r1 = new Random();
