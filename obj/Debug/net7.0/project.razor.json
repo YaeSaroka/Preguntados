@@ -18650,13 +18650,13 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "z:\\ORT2023\\Programación\\3bimestre\\TPS\\PreguntORT1\\Views\\Home\\Respuesta.cshtml",
-      "TargetPath": "Views\\Home\\Respuesta.cshtml",
+      "FilePath": "z:\\ORT2023\\Programación\\3bimestre\\TPS\\PreguntORT1\\Views\\Home\\ConfigurarJuego.cshtml",
+      "TargetPath": "Views\\Home\\ConfigurarJuego.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "z:\\ORT2023\\Programación\\3bimestre\\TPS\\PreguntORT1\\Views\\Home\\Jugar.cshtml",
-      "TargetPath": "Views\\Home\\Jugar.cshtml",
+      "FilePath": "z:\\ORT2023\\Programación\\3bimestre\\TPS\\PreguntORT1\\Views\\Home\\Respuesta.cshtml",
+      "TargetPath": "Views\\Home\\Respuesta.cshtml",
       "FileKind": "mvc"
     },
     {
