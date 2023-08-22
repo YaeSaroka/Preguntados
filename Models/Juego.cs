@@ -7,7 +7,7 @@ public static class Juego{
     private static List<Respuesta> _respuestas;
 
     public static void InicializarJuego(){
-        _username=null;
+        _username="";
         _puntajeActual=0;
         _cantidadPreguntasCorrectas=0;
         _preguntas=new List <Pregunta>();

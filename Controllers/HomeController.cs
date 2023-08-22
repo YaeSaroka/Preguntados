@@ -28,7 +28,20 @@ public class HomeController : Controller
 
     public IActionResult ConfigurarJuego()
     {
+        ViewBag.Dificultad = Juego.ObtenerDificultades();
         Juego.InicializarJuego();
+        if(ViewBag.facil == true){
+            ViewBag.dificultad_elegida = "Facil";
+        }
+        if(ViewBag.normal == true){
+            ViewBag.dificultad_elegida = "Normal";
+        }
+        if(ViewBag.dificil == true){
+            ViewBag.dificultad_elegida = "Dificil";
+        }
+        if(ViewBag.aleatorio == true){
+            ViewBag.dificultad_elegida = "Aleatorio";
+        }
         return View("ConfigurarJuego");
     }
 

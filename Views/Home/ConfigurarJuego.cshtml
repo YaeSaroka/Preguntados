@@ -11,55 +11,48 @@
             <article class="centerin w-25 opcion mt-5">
                 <p>Dificultad</p>
             </article>
-            <div class="btn-group w-50 mt-3" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-success">Facil</button>
-                <button type="button" class="btn btn-warning">Medio</button>
-                <button type="button" class="btn btn-danger">Dificil</button>
-                <button type="button" class="btn btn-info">Aleatorio</button>
+        <div class="btn-group mt-3" role="group" aria-label="Basic example">
+        @foreach(Dificultad item in ViewBag.Dificultad){
+            <input type="radio" id="@item.idDificultad" name="dificultad">
+            <label class="toggle-control" id="facil" for="@item.idDificultad" value="@item.idDificultad">@item.Nombre</label>
+        }
+        </div>
+        </form>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+<!--  <div class="btn-group mt-3" role="group" aria-label="Basic example">
+              <input type="radio" id="dif1" name="facil">
+              <label class="toggle-control" id="facil" for="dif1">Facil</label>
+              <input type="radio" id="dif2" name="normal">
+              <label class="toggle-control" id="medio" for="dif2">Medio</label>
+              <input type="radio" id="dif3" name="dificil">
+              <label class="toggle-control" id="dificil" for="dif3">Dificil</label>
+              <input type="radio" id="dif4" name="aleatorio">
+              <label class="toggle-control" id="aleatorio" for="dif4">Aleatorio</label>
             </div>
             <article class="centerin w-25 opcion mt-5">
                 <p>Categorias</p>
             </article>
-            <div class="mt-3">
-              <div class="form-check-inline">
-                <input class="form-check-input" type="checkbox" value="" id="arte">
-                <label class="form-check-label" for="defaultCheck1">
-                  Artes
-                </label>
-            </div>
-            <div class="form-check-inline">
-                <input class="form-check-input" type="checkbox" value="" id="ciencia">
-                <label class="form-check-label" for="defaultCheck1">
-                  Ciencia
-                </label>
-            </div>
-            <div class="form-check-inline">
-                <input class="form-check-input" type="checkbox" value="" id="historia">
-                <label class="form-check-label" for="defaultCheck1">
-                  Historia
-                </label>
-            </div>
-            <div class="form-check-inline">
-                <input class="form-check-input" type="checkbox" value="" id="entretenimiento">
-                <label class="form-check-label" for="defaultCheck1">
-                  Entretenimiento
-                </label>
-            </div>
-            <div class="form-check-inline">
-                <input class="form-check-input" type="checkbox" value="" id="geogafia">
-                <label class="form-check-label" for="defaultCheck1">
-                  Geografia
-                </label>
-            </div>
-            <div class="form-check-inline">
-                <input class="form-check-input" type="checkbox" value="" id="deportes">
-                <label class="form-check-label" for="defaultCheck1">
-                  Deportes
-                </label>
-            </div>
+             <div class="text-center mt-5">
+              <input type="checkbox" id="box1" name="demo[]">
+              <label class="toggle-control" id="Ciencia" for="box1">Ciencia</label>
+
+              <input type="checkbox" id="box2" name="demo[]">
+              <label class="toggle-control" id="Arte" for="box2">Arte</label>
+
+              <input type="checkbox" id="box3" name="demo[]">
+              <label class="toggle-control" id="Geografia" for="box3">Geografia</label>
+              
+              <input type="checkbox" id="box4" name="demo[]">
+              <label class="toggle-control" id="Entretenimiento" for="box4">Entretenimiento</label>
+
+              <input type="checkbox" id="box5" name="demo[]">
+              <label class="toggle-control" id="Historia" for="box5">Historia</label>
+
+              <input type="checkbox" id="box6" name="demo[]">
+              <label class="toggle-control" id="Deportes" for="box6">Deportes</label>
             </div>
             <input type="text" class="form-control w-25 centerin mt-5" placeholder="Nombre de usuario">
-            <button type="submit" class="btn btn-primary mt-5">Empezar</button>
-        </form>
-    </section>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+           
+        </form>  --¡>

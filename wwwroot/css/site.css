@@ -33,26 +33,6 @@ top: 600px;
   padding-top: 120px;
   width: 30%;
 }
-
-
-.opcion{
-  border: 1px solid black;
-  min-width: 100px;
-  max-width: 280px;
-  background-color: #adadad;
-  border-radius: 7px;
-  color: rgb(0, 0, 0);
-}
-.opcion p{
-  padding: 0;
-  margin: 0;
-}
-.centerin{
-  margin-left:auto;margin-right:auto;
-}
-.formulario{
-  height: 800px;
-}
 .linea{
   border-radius: 5px;
   border: 2px solid black;
@@ -82,4 +62,109 @@ top: 600px;
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   /*background-color: #6B202A;*/
+  
+}
+
+.buton:active{
+  border: 1px solid blue;
+}
+.opcion{
+  border: 1px solid black;
+  min-width: 100px;
+  max-width: 280px;
+  background-color: #000000;
+  border-radius: 7px;
+  color: rgb(255, 255, 255);
+}
+.opcion p{
+  padding: 0;
+  margin: 0;
+}
+.centerin{
+  margin-left:auto;margin-right:auto;
+}
+.formulario{
+  height: 800px;
+}
+
+#facil{
+  border: 3px solid rgb(31, 236, 65);
+  background: rgb(0, 0, 0);
+}
+#medio{
+  border:  solid rgb(241, 238, 31);
+  background: rgb(0, 0, 0);
+}
+#dificil{
+  border: 3px solid rgb(235, 47, 14);
+  background: rgb(0, 0, 0);
+}
+#aleatorio{
+  border: 3px solid rgb(19, 200, 224);
+  background: rgb(0, 0, 0);
+}
+#Ciencia{
+  border: 1px solid rgb(6, 212, 40);
+  background: rgb(71, 185, 6);
+}
+#Entretenimiento{
+  border: 1px solid rgb(240, 68, 162);
+  background: rgb(241, 81, 201);
+}
+#Arte{
+  border: 1px solid rgb(233, 40, 33);
+  background: rgb(243, 62, 49);
+}
+#Geografia{
+  border: 1px solid rgb(38, 90, 233);
+  background: rgb(56, 81, 226);
+}
+#Historia{
+  border: 1px solid rgb(230, 165, 27);
+  background: rgb(240, 202, 35);
+}
+#Deportes{
+  border: 1px solid rgb(240, 152, 21);
+  background: rgb(245, 168, 25);
+}
+
+input[type="checkbox"] {
+  display: none;
+  visibility: hidden;
+}
+.toggle-control {
+  position: relative;
+  margin: 0 .25rem .25rem 0;
+  color: #FFF;
+  padding: .5rem 1rem .5rem 2rem;
+  border-radius: 15px;
+  cursor: pointer;
+  text-transform: uppercase;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.toggle-control:hover {
+  box-shadow: 0 .0 1rem -.5rem #000;
+}
+input[type="checkbox"] + .toggle-control:before {
+  content: "";
+  position: absolute;
+  width: .5rem;
+  height: .5rem;
+  border: 1px solid rgb(238, 136, 118);
+  left: .75rem;
+  top: 50%;
+  margin: -.25rem 0 0 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  border-radius: 100%;
+}
+input[type="checkbox"]:checked + .toggle-control:before {
+  background: #FEF;
+  border: 1px solid #60F;
+  box-shadow: 0 0 1rem #FFF;
 }
