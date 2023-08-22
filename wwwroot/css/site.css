@@ -1,0 +1,85 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  background-color: #fcc5d7;
+}
+.futer {
+  text-decoration: none !important;
+  color: #c46182 !important;
+}
+.button{
+top: 600px;
+}
+
+#logo{
+  padding-top: 120px;
+  width: 30%;
+}
+
+
+.opcion{
+  border: 1px solid black;
+  min-width: 100px;
+  max-width: 280px;
+  background-color: #adadad;
+  border-radius: 7px;
+  color: rgb(0, 0, 0);
+}
+.opcion p{
+  padding: 0;
+  margin: 0;
+}
+.centerin{
+  margin-left:auto;margin-right:auto;
+}
+.formulario{
+  height: 800px;
+}
+.linea{
+  border-radius: 5px;
+  border: 2px solid black;
+}
+
+
+
+
+#canvas {
+  z-index:-99;
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  position: absolute;
+  background: #feac5e; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #4bc0c8,
+    #c779d0,
+    #feac5e
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #4bc0c8,
+    #c779d0,
+    #feac5e
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  /*background-color: #6B202A;*/
+}
