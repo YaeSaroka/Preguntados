@@ -17,6 +17,12 @@ public static class Juego{
         List<Categoria> Listcategorias= BD.ObtenerCategorias();
         return Listcategorias;
     }
+    public static string ObtenerUsername(){
+        return _username;
+    }
+    public static int ObtenerPuntaje(){
+        return _puntajeActual;
+    }
     public static List<Dificultad> ObtenerDificultades(){
         List<Dificultad> Listdificultades= BD.ObtenerDificultad();
         return Listdificultades;

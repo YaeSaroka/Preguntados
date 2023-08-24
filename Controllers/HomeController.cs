@@ -28,6 +28,7 @@ public class HomeController : Controller
 
     public IActionResult ConfigurarJuego()
     {
+        ViewBag.Categorias = Juego.ObtenerCategoria();
         ViewBag.Dificultad = Juego.ObtenerDificultades();
         Juego.InicializarJuego();
         if(ViewBag.facil == true){
@@ -48,10 +49,11 @@ public class HomeController : Controller
     public IActionResult Comenzar(string username, int dificultad, int categoria)
     {
        Juego.CargarPartida(username,dificultad,categoria);
+       Console.WriteLine(username,dificultad,categoria);
         List<Pregunta> Listado = null;
         Listado = BD.ObtenerPreguntas(dificultad, categoria);
         if(Listado!=null){
-            return RedirectToAction("Jugar");
+            return RedirectToAction("Jugar", new{_username=username});
         }
         else{
             return RedirectToAction("ConfigurarJuego");
@@ -59,11 +61,13 @@ public class HomeController : Controller
     }
     public IActionResult Jugar()
     {
+        ViewBag.puntaje = Juego.ObtenerPuntaje();
         ViewBag.pregunta_actual = Juego.ObtenerProximaPregunta();
+        ViewBag.username=Juego.ObtenerUsername();
         if(ViewBag.pregunta_actual != null)
         {
-            ViewBag.Respuestas = Juego.ObtenerProximasRespuestas(ViewBag.pregunta_actual);
-            return RedirectToAction("Jugar");
+            ViewBag.Respuestas = Juego.ObtenerProximasRespuestas(ViewBag.pregunta_actual.idPregunta);
+            return View("Jugar");
 
         } else return RedirectToAction("Fin"); 
     }

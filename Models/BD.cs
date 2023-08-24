@@ -32,11 +32,11 @@ public static class BD
                 ListadoPregunta=db.Query<Pregunta>(sql).ToList();
             }
             else if(dificultad!=-1 && categoria==-1){
-                string sql = "SELECT * FROM Preguntas WHERE idDificultad = dificultad";
+                string sql = "SELECT * FROM Preguntas WHERE idDificultad = idDificultad";
                 ListadoPregunta=db.Query<Pregunta>(sql).ToList();
             }
             else{
-                string sql = "SELECT * FROM Preguntas WHERE idDificultad = dificultad AND idCategoria = categoria";
+                string sql = "SELECT * FROM Preguntas WHERE idDificultad = idDificultad AND idCategoria = idCategoria";
                 ListadoPregunta=db.Query<Pregunta>(sql).ToList();
             }
             return ListadoPregunta; 

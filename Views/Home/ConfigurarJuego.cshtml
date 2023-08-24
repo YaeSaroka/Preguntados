@@ -4,55 +4,33 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 <section class="text-center">
     <h1>Configuración</h1>
-    <hr class="linea">
+
+<form action='@Url.Action("Comenzar")'>
+<section class="btn-group">
+<input name="username" type="text" placeholder="Ingrese su nombre" data-bs-toggle="dropdown" aria-expanded="false">
 </section>
-    <section>
-        <form class="container-fluid text-center formulario">
-            <article class="centerin w-25 opcion mt-5">
-                <p>Dificultad</p>
-            </article>
-        <div class="btn-group mt-3" role="group" aria-label="Basic example">
-        @foreach(Dificultad item in ViewBag.Dificultad){
-            <input type="radio" id="@item.idDificultad" name="dificultad">
-            <label class="toggle-control" id="facil" for="@item.idDificultad" value="@item.idDificultad">@item.Nombre</label>
-        }
-        </div>
-        </form>
-</section>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<div class="opciones-dif-cat">
+<main class="btn-group">
+<select name="categoria" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+<option> Seleccione categoría </option>
+@foreach(Categoria item in ViewBag.Categorias){
+    <option value="@item.idCategoria">  @item.Nombre </option>
+}
+</div></select> </main>
+<main class="btn-group">
+<select name="dificultad"  type="button" data-bs-toggle="dropdown" aria-expanded="false">
+<option> Seleccione dificultad </option>
+@foreach(Dificultad item in ViewBag.Dificultad){
+    <option value="@item.idDificultad">  @item.Nombre </option>
+}
+</select> </main>
+<input type="submit" value="Submit" />
+</form>
 
-<!--  <div class="btn-group mt-3" role="group" aria-label="Basic example">
-              <input type="radio" id="dif1" name="facil">
-              <label class="toggle-control" id="facil" for="dif1">Facil</label>
-              <input type="radio" id="dif2" name="normal">
-              <label class="toggle-control" id="medio" for="dif2">Medio</label>
-              <input type="radio" id="dif3" name="dificil">
-              <label class="toggle-control" id="dificil" for="dif3">Dificil</label>
-              <input type="radio" id="dif4" name="aleatorio">
-              <label class="toggle-control" id="aleatorio" for="dif4">Aleatorio</label>
-            </div>
-            <article class="centerin w-25 opcion mt-5">
-                <p>Categorias</p>
-            </article>
-             <div class="text-center mt-5">
-              <input type="checkbox" id="box1" name="demo[]">
-              <label class="toggle-control" id="Ciencia" for="box1">Ciencia</label>
 
-              <input type="checkbox" id="box2" name="demo[]">
-              <label class="toggle-control" id="Arte" for="box2">Arte</label>
 
-              <input type="checkbox" id="box3" name="demo[]">
-              <label class="toggle-control" id="Geografia" for="box3">Geografia</label>
-              
-              <input type="checkbox" id="box4" name="demo[]">
-              <label class="toggle-control" id="Entretenimiento" for="box4">Entretenimiento</label>
 
-              <input type="checkbox" id="box5" name="demo[]">
-              <label class="toggle-control" id="Historia" for="box5">Historia</label>
 
-              <input type="checkbox" id="box6" name="demo[]">
-              <label class="toggle-control" id="Deportes" for="box6">Deportes</label>
-            </div>
-            <input type="text" class="form-control w-25 centerin mt-5" placeholder="Nombre de usuario">
-           
-        </form> asfasfasfsaf --¡>
+
+
+

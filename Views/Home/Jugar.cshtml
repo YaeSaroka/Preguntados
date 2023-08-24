@@ -1,0 +1,20 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="card" style="width: 15rem;">
+  <div class="card-header">
+   <h5>Usuario: @ViewBag.username</h5>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">@ViewBag.puntaje</li>
+  </ul>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <div class="card-header">
+    <h1> @ViewBag.pregunta_actual.Enunciado</h1>
+  </div>
+  @foreach(string opcion in ViewBag.Respuestas){
+    <h3>opcion </h3>
+  }
+</div>
